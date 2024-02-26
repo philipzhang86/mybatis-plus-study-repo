@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.jmalltech.mapper.UserMapper">
+
+    <!--IPage<User> queryByAge(IPage<User> page, @Param("age") Integer age);-->
+    <!--方法写的就是查询集合的泛型， ∴ resultType 方Ipage<T>中的泛型    -->
+    <select id="queryByAge" resultType="com.jmalltech.pojo.User">
+        select * from mybatis_demo01.user where age > #{age}
+    </select>
+</mapper>
